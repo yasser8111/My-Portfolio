@@ -32,6 +32,7 @@ const HeroSection = ({ scrollToSection }) => {
   const heroSubtitle = t("hero.subtitle") || "";
   const viewProjectsBtn = t("buttons.viewProjects") || "";
   const contactMeBtn = t("buttons.contactMe") || "";
+  const fullName = t("personal.fullName") || "";
 
   return (
     <section className="relative overflow-hidden min-h-dvh bg-white flex items-center">
@@ -39,7 +40,7 @@ const HeroSection = ({ scrollToSection }) => {
         <div className="relative z-10 w-full flex items-center px-4 md:px-12">
           <div className="flex flex-col items-center text-center md:items-start md:text-start w-full max-w-4xl">
             <span className="text-xs font-bold uppercase tracking-[0.3em] text-slate-400 mb-4 md:mb-6">
-              Yasser Tareq
+              {fullName}
             </span>
             <h2 className="text-[clamp(2rem,6vw,4rem)] font-black tracking-tighter leading-[1.2] mb-8 text-slate-900 text-balance max-w-3xl mx-auto md:mx-0">
               {heroTitle.split("\n").map((line, i) => (
