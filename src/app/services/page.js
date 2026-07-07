@@ -59,7 +59,7 @@ const ServicesPage = () => {
           <PageBanner
             title={sections.services}
             subtitle={sections.servicesSubtitle}
-            backgroundImage="/section-banner.svg"
+            // backgroundImage="/section-banner.svg"
           />
 
           {/* ── One section per service ───────────────────────────────────── */}

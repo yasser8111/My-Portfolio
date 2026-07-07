@@ -37,7 +37,7 @@ const AboutPage = () => {
           <PageBanner
             title={sections.about}
             subtitle={philosophy.split("\n")[0]}
-            backgroundImage="/section-banner.svg"
+            // backgroundImage="/section-banner.svg"
           />
 
           {/* Detailed About & Skills */}

