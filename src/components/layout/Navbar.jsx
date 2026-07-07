@@ -5,7 +5,7 @@ import MaterialIcon from "@/components/ui/MaterialIcon";
 import LanguageSwitcher from "@/context/LanguageSwitcher";
 import { useLanguage } from "@/context/LanguageContext";
 
-const NAV_LINKS = ["home", "projects", "about", "services"];
+const NAV_LINKS = ["services", "about", "projects", "home"];
 
 const Navbar = ({
   isMenuOpen,
@@ -67,29 +67,20 @@ const Navbar = ({
             {/* Desktop nav links — hidden on mobile */}
             {!backMode && (
               <div className="hidden md:flex items-center gap-4 md:gap-6">
-                <a
-                  href="#projects"
-                  onClick={(e) => handleNavClick(e, "projects")}
-                  className={`text-xs font-bold uppercase tracking-widest transition-colors ${
-                    !scrolled
-                      ? "text-white/80 hover:text-white md:text-slate-600 md:hover:text-blue-600"
-                      : "text-slate-600 hover:text-blue-600"
-                  }`}
-                >
-                  {t("nav.projects")}
-                </a>
-
-                <a
-                  href="#about"
-                  onClick={(e) => handleNavClick(e, "about")}
-                  className={`text-xs font-bold uppercase tracking-widest transition-colors ${
-                    !scrolled
-                      ? "text-white/80 hover:text-white md:text-slate-600 md:hover:text-blue-600"
-                      : "text-slate-600 hover:text-blue-600"
-                  }`}
-                >
-                  {t("nav.about")}
-                </a>
+                {NAV_LINKS.map((section) => (
+                  <a
+                    key={section}
+                    href={`#${section}`}
+                    onClick={(e) => handleNavClick(e, section)}
+                    className={`text-xs font-bold uppercase tracking-widest transition-colors ${
+                      !scrolled
+                        ? "text-white/80 hover:text-white md:text-slate-600 md:hover:text-blue-600"
+                        : "text-slate-600 hover:text-blue-600"
+                    }`}
+                  >
+                    {t(`nav.${section}`)}
+                  </a>
+                ))}
               </div>
             )}
           </div>

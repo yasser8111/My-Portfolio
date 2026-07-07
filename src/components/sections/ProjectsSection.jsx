@@ -14,7 +14,7 @@ const ProjectsSection = () => {
   const sections = t("sections") || {};
   const buttons = t("buttons") || {};
 
-  const featured = projects.filter((p) => p.title === "Airtiqa" || p.title === "ColorLab");
+  const featured = projects.filter((p) => p.title === "Airtiqa University Center" || p.title === "ColorLab");
 
   return (
     <section id="projects">
@@ -22,7 +22,7 @@ const ProjectsSection = () => {
         <Title>{sections.selectedWorks}</Title>
 
         {featured.length > 0 && (
-          <div className="px-4 md:px-12 pb-8 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          <div className="px-4 md:px-12 pb-8 grid grid-cols-1 md:grid-cols-2">
             {featured.map((project) => (
               <Link
                 key={project.title}

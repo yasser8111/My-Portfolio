@@ -88,7 +88,7 @@
   ],
   "projects": [
     {
-      "title": "Airtiqa",
+      "title": "Airtiqa University Center",
       "tech": "React / Vite / Tailwind CSS / React Router / Swiper",
       "desc": "A modern bilingual university platform designed for Airtiqa University Center, featuring seamless Arabic and English support, dynamic news management, interactive content sections, and a responsive experience focused on student engagement and accessibility.",
       "year": "2026",
@@ -181,9 +181,9 @@
     "backToProjects": "Back to Projects"
   },
   "notFound": {
-    "title": "404",
-    "subtitle": "Page Not Found",
-    "message": "The page you are looking for doesn't exist or has been moved.",
-    "button": "Go Back Home"
+    "title": "Nowhere",
+    "subtitle": "This page isn't part of the plan.",
+    "message": "The link you followed leads somewhere that doesn't exist — at least not yet. The homepage is always a good place to regroup.",
+    "button": "Back to base"
   }
 }

@@ -12,7 +12,7 @@ const HeroSection = ({ scrollToSection }) => {
   const fullName = t("personal.fullName") || "";
 
   return (
-    <section className="relative overflow-hidden min-h-dvh bg-white flex items-center">
+    <section id="home" className="relative overflow-hidden min-h-dvh bg-white flex items-center">
       {/* Mobile background */}
       <div className="md:hidden absolute inset-0">
         <img src="/me.jpeg" alt="" className="w-full h-full object-cover" />
