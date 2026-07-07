@@ -159,7 +159,7 @@ const ProjectsSection = () => {
                     <img
                       src={airtiqa.image}
                       alt={airtiqa.title}
-                      className="w-full h-full object-cover aspect-[4/3] md:aspect-auto md:absolute md:inset-0 transition-transform duration-700 group-hover:scale-105"
+                      className="w-full h-full object-cover aspect-4/3 md:aspect-auto md:absolute md:inset-0 transition-transform duration-700 group-hover:scale-105"
                       loading="lazy"
                     />
                   </div>
