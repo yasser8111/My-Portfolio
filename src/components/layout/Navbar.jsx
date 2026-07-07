@@ -38,7 +38,9 @@ const Navbar = ({
             <img
               src="/logo.svg"
               alt="Logo"
-              className="w-8 h-8 md:w-9 md:h-9 object-contain pointer-events-none select-none"
+              className={`w-8 h-8 md:w-9 md:h-9 object-contain pointer-events-none select-none transition-all duration-300 ${
+                !scrolled ? "brightness-0 invert" : ""
+              }`}
               draggable="false"
             />
 
@@ -50,7 +52,11 @@ const Navbar = ({
                     scrollToSection?.(e, "projects");
                     setIsMenuOpen?.(false);
                   }}
-                  className="text-xs font-bold uppercase tracking-widest text-slate-600 hover:text-blue-600 transition-colors"
+                  className={`text-xs font-bold uppercase tracking-widest transition-colors ${
+                    !scrolled
+                      ? "text-white/80 hover:text-white"
+                      : "text-slate-600 hover:text-blue-600"
+                  }`}
                 >
                   {t("nav.projects")}
                 </a>
@@ -61,7 +67,11 @@ const Navbar = ({
                     scrollToSection?.(e, "about");
                     setIsMenuOpen?.(false);
                   }}
-                  className="text-xs font-bold uppercase tracking-widest text-slate-600 hover:text-blue-600 transition-colors"
+                  className={`text-xs font-bold uppercase tracking-widest transition-colors ${
+                    !scrolled
+                      ? "text-white/80 hover:text-white"
+                      : "text-slate-600 hover:text-blue-600"
+                  }`}
                 >
                   {t("nav.about")}
                 </a>
@@ -83,7 +93,7 @@ const Navbar = ({
             </button>
           ) : (
             <div className="flex items-center gap-2 md:gap-3">
-              <LanguageSwitcher />
+              <LanguageSwitcher light={!scrolled} />
 
               <a
                 href="#contact"

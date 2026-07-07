@@ -36,19 +36,30 @@ const HeroSection = ({ scrollToSection }) => {
 
   return (
     <section className="relative overflow-hidden min-h-dvh bg-white flex items-center">
+      {/* Mobile: full background image with dark overlay */}
+      <div className="md:hidden absolute inset-0">
+        <img
+          src="/me.jpeg"
+          alt=""
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60" />
+        <div className="absolute inset-0 bg-blue-600/5 mix-blend-multiply" />
+      </div>
+
       <div className="w-full grid grid-cols-1 md:grid-cols-[6fr_4fr] items-stretch min-h-dvh relative z-10">
-        <div className="relative z-10 w-full flex items-center px-4 md:px-12">
+        <div className="relative z-10 w-full flex items-center px-5 md:px-12">
           <div className="flex flex-col items-center text-center md:items-start md:text-start w-full max-w-4xl">
-            <span className="text-xs font-bold uppercase tracking-[0.3em] text-slate-400 mb-4 md:mb-6">
+            <span className="text-xs font-bold uppercase tracking-[0.3em] mb-4 md:mb-6 text-white/60 md:text-slate-400">
               {fullName}
             </span>
-            <h2 className="text-[clamp(2rem,6vw,4rem)] font-black tracking-tighter leading-[1.2] mb-8 text-slate-900 text-balance max-w-3xl mx-auto md:mx-0">
+            <h2 className="text-[clamp(2rem,6vw,4rem)] font-black tracking-tighter leading-[1.2] mb-8 text-white md:text-slate-900 text-balance max-w-3xl mx-auto md:mx-0">
               {heroTitle.split("\n").map((line, i) => (
                 <span key={i} className="block w-full">
                   <TextBlock blockColor="#2563eb" className="block">
                     {line.split(/(grow|تنمو)/g).map((part, j) =>
                       part === "grow" || part === "تنمو" ? (
-                        <span key={j} className="text-blue-600">
+                        <span key={j} className="text-blue-400 md:text-blue-600">
                           {part}
                         </span>
                       ) : (
@@ -60,13 +71,13 @@ const HeroSection = ({ scrollToSection }) => {
               ))}
             </h2>
 
-            <div className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto justify-center md:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center md:justify-start">
               <Button
                 href="#projects"
                 onClick={(e) => scrollToSection(e, "projects")}
                 variant="primary"
                 size="lg"
-                className="px-10 py-4 text-lg"
+                className="px-8 py-4 text-base md:px-10 md:text-lg"
               >
                 {viewProjectsBtn}
               </Button>
@@ -75,30 +86,16 @@ const HeroSection = ({ scrollToSection }) => {
                 onClick={(e) => scrollToSection(e, "contact")}
                 variant="outline"
                 size="lg"
-                className="px-10 py-4 text-lg"
+                className="px-8 py-4 text-base md:px-10 md:text-lg border-white/40 text-white hover:bg-white/10 hover:border-white md:border-slate-300 md:text-slate-900 md:hover:border-slate-900"
               >
                 {contactMeBtn}
               </Button>
             </div>
-
-            {/* <div className="mt-12 pt-8 flex flex-wrap w-full items-center justify-center md:justify-start gap-x-6 gap-y-4 sm:gap-x-8 text-sm font-semibold text-slate-600">
-              <div className="flex items-center gap-2">
-                <MaterialIcon icon="check_circle" size={18} className="text-blue-600" />
-                <span>{t("hero.stats.completedProjects")}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <MaterialIcon icon="speed" size={18} className="text-blue-600" />
-                <span>{t("hero.stats.focusPerformance")}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <MaterialIcon icon="design_services" size={18} className="text-blue-600" />
-                <span>{t("hero.stats.bestPractice")}</span>
-              </div>
-            </div> */}
           </div>
         </div>
 
-        <div className="relative overflow-hidden bg-slate-50 hidden md:flex items-center justify-center min-h-[400px] md:min-h-0">
+        {/* Desktop image — hidden on mobile */}
+        <div className="relative overflow-hidden bg-slate-50 hidden md:flex items-center justify-center min-h-0">
           <img
              src="/me.jpeg"
              alt="Hero"
