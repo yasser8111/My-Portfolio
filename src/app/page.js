@@ -38,6 +38,9 @@ const HeroSection = ({ scrollToSection }) => {
       <div className="w-full grid grid-cols-1 md:grid-cols-[6fr_4fr] items-stretch min-h-dvh relative z-10">
         <div className="relative z-10 w-full flex items-center px-4 md:px-12">
           <div className="flex flex-col items-center text-center md:items-start md:text-start w-full max-w-4xl">
+            <span className="text-xs font-bold uppercase tracking-[0.3em] text-slate-400 mb-4 md:mb-6">
+              Yasser Tareq
+            </span>
             <h2 className="text-[clamp(2rem,6vw,4rem)] font-black tracking-tighter leading-[1.2] mb-8 text-slate-900 text-balance max-w-3xl mx-auto md:mx-0">
               {heroTitle.split("\n").map((line, i) => (
                 <span key={i} className="block w-full">
@@ -113,59 +116,59 @@ const ProjectsSection = () => {
   const sections = t("sections") || {};
   const buttons = t("buttons") || {};
 
-  // Filter to only Airtiqa for the featured section
-  const airtiqa = projects.find((p) => p.title === "Airtiqa");
+  // Featured projects
+  const featured = projects.filter((p) => p.title === "Airtiqa" || p.title === "ColorLab");
 
   return (
     <section id="projects">
       <div className="w-full">
         <Title>{sections.selectedWorks}</Title>
 
-        {airtiqa && (
-          <div className="px-4 md:px-12 pb-8">
-            <Link
-              href={`/projects/${createSlug(airtiqa.title)}`}
-              className="group block"
-            >
-              <div className="relative overflow-hidden bg-slate-50 border border-slate-100 transition-all duration-500 hover:border-blue-600 hover:shadow-xl hover:shadow-blue-900/5">
-                <div className="grid grid-cols-1 md:grid-cols-2 min-h-[400px]">
-                  {/* Content Side */}
-                  <div className="flex flex-col justify-center p-8 md:p-12 order-2 md:order-1">
-                    <div className="flex items-center gap-3 mb-4">
-                      <span className="text-[10px] text-white bg-blue-600 px-2 py-0.5 uppercase tracking-widest font-bold">
-                        Featured
-                      </span>
-                      <span className="text-xs font-mono font-medium text-slate-400 tracking-wider">
-                        {airtiqa.year}
-                      </span>
-                    </div>
-                    <h3 className="text-3xl md:text-4xl font-black tracking-tight text-slate-900 mb-4 group-hover:text-blue-600 transition-colors duration-200">
-                      {airtiqa.title}
-                    </h3>
-                    <p className="text-base md:text-lg text-slate-500 font-medium leading-relaxed mb-6">
-                      {airtiqa.desc}
-                    </p>
-                    <p className="text-sm font-semibold text-blue-600 tracking-wide">
-                      {airtiqa.tech}
-                    </p>
-                    <div className="mt-6 flex items-center gap-2 text-blue-600 text-xs font-bold uppercase tracking-widest group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform duration-200">
-                      <span>View Details</span>
-                      <MaterialIcon icon="arrow_forward" size={16} />
-                    </div>
-                  </div>
-
-                  {/* Image Side */}
-                  <div className="relative overflow-hidden bg-slate-100 order-1 md:order-2">
+        {featured.length > 0 && (
+          <div className="px-4 md:px-12 pb-8 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            {featured.map((project) => (
+              <Link
+                key={project.title}
+                href={`/projects/${createSlug(project.title)}`}
+                className="group block"
+              >
+                <div className="relative overflow-hidden bg-slate-50 border border-slate-100 transition-all duration-300 hover:border-blue-600 hover:shadow-xl hover:shadow-blue-900/5 h-full">
+                  <div className="aspect-[16/12] md:aspect-[4/3] relative overflow-hidden">
                     <img
-                      src={airtiqa.image}
-                      alt={airtiqa.title}
-                      className="w-full h-full object-cover aspect-4/3 md:aspect-auto md:absolute md:inset-0 transition-transform duration-700 group-hover:scale-105"
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                       loading="lazy"
                     />
+
+                    {/* Dark gradient overlay - always visible on mobile, on hover on desktop */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300" />
+
+                    {/* Content overlay - always visible on mobile, on hover on desktop */}
+                    <div className="absolute inset-0 flex flex-col justify-end p-5 md:p-8 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="flex items-center gap-3 mb-3">
+                        <span className="text-[10px] text-white bg-blue-600 px-2 py-0.5 uppercase tracking-widest font-bold">
+                          Featured
+                        </span>
+                        <span className="text-xs font-mono font-medium text-white/70 tracking-wider">
+                          {project.year}
+                        </span>
+                      </div>
+                      <h3 className="text-xl md:text-2xl font-black tracking-tight text-white mb-2">
+                        {project.title}
+                      </h3>
+                      <p className="text-sm text-white/80 font-medium leading-relaxed line-clamp-2 max-w-prose">
+                        {project.desc}
+                      </p>
+                      <div className="mt-3 flex items-center gap-2 text-blue-400 text-xs font-bold uppercase tracking-widest">
+                        <span>View Details</span>
+                        <MaterialIcon icon="arrow_forward" size={16} />
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            ))}
           </div>
         )}
 
@@ -207,6 +210,8 @@ const AboutAndSkillsSection = () => {
               </TextBlock>
             </h4>
           )}
+
+          {/* Concise main text */}
           {about.text?.split("\n\n").map((paragraph, i) => (
             <p key={i} className="text-base md:text-lg leading-relaxed text-slate-500 mb-5 last:mb-8 text-balance">
               <TextBlock blockColor="#cbd5e1" className="block">

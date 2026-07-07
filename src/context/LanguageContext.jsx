@@ -32,6 +32,12 @@ export const LanguageProvider = ({ children }) => {
       const saved = localStorage.getItem(STORAGE_KEY);
       if (saved && translations[saved]) {
         setLangState(saved);
+        return;
+      }
+      // No saved preference — detect browser system language
+      const navLang = navigator.language || navigator.userLanguage || "";
+      if (navLang.startsWith("ar")) {
+        setLangState("ar");
       }
     } catch {}
   }, []);

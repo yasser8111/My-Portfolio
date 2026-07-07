@@ -45,9 +45,9 @@ const AboutPage = () => {
               {/* Left Column: Story */}
               <div className="lg:col-span-7 py-10 px-4 md:px-12">
                 <div className="flex items-center gap-3 mb-10 text-slate-400">
-                  <MaterialIcon icon="lightbulb" size={20} />
+                  <MaterialIcon icon="person" size={20} />
                   <span className="text-xs font-bold uppercase tracking-[0.3em]">
-                    {sections.myStory}
+                    {sections.about}
                   </span>
                 </div>
                 <div className="space-y-8">
@@ -58,8 +58,9 @@ const AboutPage = () => {
                       </TextBlock>
                     </h4>
                   )}
+                  {/* Concise intro */}
                   {about.text?.split("\n\n").map((paragraph, i) => (
-                    <p key={i} className="text-lg md:text-xl text-slate-600 leading-relaxed font-medium text-balance">
+                    <p key={`intro-${i}`} className="text-lg md:text-xl text-slate-600 leading-relaxed font-medium text-balance">
                       <TextBlock blockColor="#475569" className="block">
                         {paragraph.split(/(\*\*[^*]+\*\*)/g).map((part, j) =>
                           part.startsWith("**") && part.endsWith("**") ? (
@@ -73,6 +74,34 @@ const AboutPage = () => {
                       </TextBlock>
                     </p>
                   ))}
+                  {/* Full story */}
+                  {about.longText && (
+                    <>
+                      <div className="pt-4">
+                        <div className="flex items-center gap-3 mb-8 text-slate-400">
+                          <MaterialIcon icon="auto_stories" size={20} />
+                          <span className="text-xs font-bold uppercase tracking-[0.3em]">
+                            {sections.myStory}
+                          </span>
+                        </div>
+                        {about.longText.split("\n\n").map((paragraph, i) => (
+                          <p key={`story-${i}`} className="text-lg md:text-xl text-slate-500 leading-relaxed font-medium text-balance mb-6 last:mb-0">
+                            <TextBlock blockColor="#94a3b8" className="block">
+                              {paragraph.split(/(\*\*[^*]+\*\*)/g).map((part, j) =>
+                                part.startsWith("**") && part.endsWith("**") ? (
+                                  <strong key={j} className="font-bold text-slate-700">
+                                    {part.slice(2, -2)}
+                                  </strong>
+                                ) : (
+                                  part
+                                )
+                              )}
+                            </TextBlock>
+                          </p>
+                        ))}
+                      </div>
+                    </>
+                  )}
                 </div>
 
                 {/* Textual Certificates Section */}

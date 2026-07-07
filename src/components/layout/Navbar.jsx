@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
 import MaterialIcon from "@/components/ui/MaterialIcon";
 import LanguageSwitcher from "@/context/LanguageSwitcher";
 import { useLanguage } from "@/context/LanguageContext";
@@ -30,21 +29,27 @@ const Navbar = ({
       <nav
         className={`fixed top-0 left-0 right-0 z-60 transition-all duration-300 px-4 md:px-12 ${
           scrolled
-            ? "bg-white/90 backdrop-blur-md shadow-sm py-2 md:py-3"
+            ? "bg-white/90 backdrop-blur-md py-2 md:py-3"
             : "bg-transparent py-2 md:py-3"
         }`}
       >
         <div className="flex justify-between items-center" dir={dir}>
           <div className="flex items-center gap-4 md:gap-6">
-            <Link href="/" onClick={() => setIsMenuOpen?.(false)}>
-              <img src="/logo.svg" alt="Logo" className="w-8 h-8 md:w-9 md:h-9 object-contain" />
-            </Link>
+            <img
+              src="/logo.svg"
+              alt="Logo"
+              className="w-8 h-8 md:w-9 md:h-9 object-contain pointer-events-none select-none"
+              draggable="false"
+            />
 
             {!backMode && (
               <>
                 <a
                   href="#projects"
-                  onClick={(e) => { scrollToSection?.(e, "projects"); setIsMenuOpen?.(false); }}
+                  onClick={(e) => {
+                    scrollToSection?.(e, "projects");
+                    setIsMenuOpen?.(false);
+                  }}
                   className="text-xs font-bold uppercase tracking-widest text-slate-600 hover:text-blue-600 transition-colors"
                 >
                   {t("nav.projects")}
@@ -52,7 +57,10 @@ const Navbar = ({
 
                 <a
                   href="#about"
-                  onClick={(e) => { scrollToSection?.(e, "about"); setIsMenuOpen?.(false); }}
+                  onClick={(e) => {
+                    scrollToSection?.(e, "about");
+                    setIsMenuOpen?.(false);
+                  }}
                   className="text-xs font-bold uppercase tracking-widest text-slate-600 hover:text-blue-600 transition-colors"
                 >
                   {t("nav.about")}
@@ -66,7 +74,11 @@ const Navbar = ({
               onClick={onBack}
               className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-600 hover:text-blue-600 transition-colors"
             >
-              <MaterialIcon icon="arrow_back" size={16} className="rtl:rotate-180" />
+              <MaterialIcon
+                icon="arrow_back"
+                size={16}
+                className="rtl:rotate-180"
+              />
               {backText}
             </button>
           ) : (
@@ -75,7 +87,10 @@ const Navbar = ({
 
               <a
                 href="#contact"
-                onClick={(e) => { scrollToSection?.(e, "contact"); setIsMenuOpen?.(false); }}
+                onClick={(e) => {
+                  scrollToSection?.(e, "contact");
+                  setIsMenuOpen?.(false);
+                }}
                 className="text-xs font-bold uppercase tracking-widest text-white bg-blue-600 hover:bg-blue-700 transition-colors px-3 py-2"
               >
                 {t("nav.contact")}

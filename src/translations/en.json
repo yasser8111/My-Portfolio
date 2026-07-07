@@ -14,6 +14,7 @@
     "sourceCode": "Source Code",
     "viewAll": "Explore Projects",
     "aboutMe": "More",
+    "aboutLess": "Less",
     "moreServices": "More",
     "backToHome": "Back"
   },
@@ -55,7 +56,8 @@
   },
   "about": {
     "greeting": "Hi, I'm Yasser.",
-    "text": "I've been fascinated by building things for as long as I can remember. When I was younger, I started exploring programming through **Godot**, where I created small games and discovered how rewarding it feels to turn an idea into something real.\n\nAs my curiosity grew, I wanted to build my own website, so I began learning HTML, CSS, and JavaScript. My very first website was, honestly, far from good—but to me, it represented something much bigger: the beginning of a journey.\n\nSince then, I've continued improving my skills, focusing on creating fast, clean, and thoughtful web experiences. Every project teaches me something new, and I still enjoy the same feeling that inspired me from the start—building useful things that people can actually use.",
+    "text": "I am a **frontend developer** and **digital experience designer** who enjoys transforming ideas into clear, intuitive, and user-friendly products. My journey started with a passion for creating games and interactive experiences, which later expanded into web development and building websites focused on **performance, design, and user experience**.\n\nToday, I focus on creating **modern, fast, and scalable interfaces** that help projects present themselves professionally and deliver better experiences for users, while paying attention to the small details that make the difference between an ordinary website and an exceptional experience.",
+    "longText": "Since my childhood, I have been passionate about programming and building things. I always wondered: how are the apps and games I use built? This curiosity led me to learn **Godot**, where I started designing simple games, and that was the first time I felt the joy of turning an idea into something others could experience.\n\nAfter that, I wanted to build my own website, so I started learning the basics of web development like **HTML, CSS, and JavaScript**. My first website was very simple, and honestly not the best, but for me it was the start of a journey that changed a lot. It taught me that every project, no matter how small, is a step toward a better level.\n\nToday, I focus on designing and developing **fast, clear, and easy-to-use websites**, with great attention to detail, performance, and user experience. And I still enjoy the same feeling I had from my first project: building useful things that can make a real difference.",
     "points": []
   },
   "philosophy": "Simplicity in Code, Clarity in design.\nI believe that complexity is the enemy of progress. In code, simplicity means maintainability and performance. In design, clarity means an intuitive experience where the user never has to guess. My approach is to strip away the noise until only what is essential remains.",
