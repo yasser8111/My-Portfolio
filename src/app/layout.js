@@ -1,7 +1,7 @@
 import { Plus_Jakarta_Sans, Cairo } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
-import SmoothScroll from "@/components/layout/SmoothScroll";
+import SmoothScrollWrapper from "@/components/layout/SmoothScrollWrapper";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -16,10 +16,29 @@ const cairo = Cairo({
 });
 
 export const metadata = {
-  title: "Yasser Bin Bishr | بروتوفوليو ياسر بن بشر",
-  description: "Yasser Bin Bishr | بروتوفوليو ياسر بن بشر - Full Stack Developer and UI/UX Designer.",
+  title: {
+    default: "Yasser Bin Bishr | ياسر بن بشر",
+    template: "%s | Yasser Bin Bishr",
+  },
+  description: "Frontend developer and UI/UX designer specializing in fast, accessible, and scalable web experiences.",
   icons: {
     icon: "/favicon.svg",
+  },
+  openGraph: {
+    title: "Yasser Bin Bishr | ياسر بن بشر",
+    description: "Frontend developer and UI/UX designer specializing in fast, accessible, and scalable web experiences.",
+    type: "website",
+    locale: "en_US",
+    siteName: "Yasser Bin Bishr",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Yasser Bin Bishr | ياسر بن بشر",
+    description: "Frontend developer and UI/UX designer specializing in fast, accessible, and scalable web experiences.",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -43,9 +62,9 @@ export default function RootLayout({ children }) {
       </head>
       <body className="min-h-full flex flex-col">
         <LanguageProvider>
-          <SmoothScroll>
+          <SmoothScrollWrapper>
             {children}
-          </SmoothScroll>
+          </SmoothScrollWrapper>
         </LanguageProvider>
       </body>
     </html>

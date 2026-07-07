@@ -5,6 +5,8 @@
     "projects": "أعمالي",
     "services": "خدماتي",
     "contact": "تواصل",
+    "menu": "القائمة",
+    "close": "إغلاق",
     "allProjects": "جميع المشاريع"
   },
   "buttons": {
@@ -35,7 +37,7 @@
   "personal": {
     "nickname": "YSR",
     "name": "ياسر",
-    "fullName": "ياسر طارق",
+    "fullName": "ياســـر طـــارق",
     "email": "yasser.dev.811@gmail.com",
     "underConstructionText": "الموقع قيد التطوير",
     "socials": {
@@ -90,7 +92,9 @@
       "tech": "React / Vite / Tailwind CSS / React Router / Swiper",
       "desc": "منصة جامعية حديثة ثنائية اللغة صممت لمركز الارتقاء الجامعي، تتميز بدعم سلس للعربية والإنجليزية، وإدارة ديناميكية للأخبار، وأقسام تفاعلية، وتجربة متجاوبة تركز على تفاعل الطلاب وسهولة الوصول.",
       "year": "2026",
+      "cover": "/projects/airtqa-1.png",
       "image": "/projects/airtqa-1.png",
+      "images": ["/projects/airtqa-1.png", "/projects/airtqa-2.png"],
       "demoUrl": "https://airtiqa.vercel.app",
       "repoUrl": "https://github.com/yasser8111/Airtqa"
     },
@@ -99,26 +103,11 @@
       "tech": "HTML / CSS / JavaScript / Color Algorithms",
       "desc": "مولّد أنظمة ألوان احترافي يعمل بالذكاء الاصطناعي، ينشئ لوحات ألوان متكاملة من لون أساسي واحد. صمم لمنتجات SaaS العصرية مع أوضاع تناسق وتحسينات للوضع المظلم وخيارات تصدير فورية.",
       "year": "2026",
+      "cover": "/projects/colorlab-1.png",
       "image": "/projects/colorlab-1.png",
+      "images": ["/projects/colorlab-1.png", "/projects/colorlab-2.png"],
       "demoUrl": "https://colorlab811.vercel.app",
       "repoUrl": "https://github.com/yasser8111/ColorLab"
-    },
-    {
-      "title": "GridX",
-      "tech": "JavaScript / HTML / CSS / CodeMirror",
-      "desc": "لعبة برمجية تفاعلية لتعليم منطق البرمجة من خلال تنفيذ كود JavaScript في الوقت الفعلي. يحل اللاعبون التحديات بالتحكم بشخصية على شبكة مع تعلم الحلقات والشروط وحل المشكلات في بيئة ممتعة.",
-      "year": "2026",
-      "image": "/projects/gridx-1.png",
-      "demoUrl": "https://gridx811.vercel.app",
-      "repoUrl": "https://github.com/yasser8111/GridX"
-    },
-    {
-      "title": "ControlTap",
-      "tech": "JavaScript / Chrome Extension",
-      "desc": "إضافة متصفح تعزز تحكم المستخدم وإنتاجيته من خلال تبسيط إدارة التبويبات وتوفير إجراءات وصول سريع.",
-      "year": "2026",
-      "image": "https://bfpjacqkzxjirhoqpsmy.supabase.co/storage/v1/object/public/imges/controlTap.png",
-      "repoUrl": "https://github.com/yasser8111/ControlTap-Beta"
     }
   ],
   "expertise": [
@@ -136,7 +125,7 @@
     },
     {
       "category": "الأدوات",
-      "skills": ["Git", "GitHub", "VS Code", "npm", "pnpm", "ESLint", "Prettier", "Vercel", "Cloudinary"]
+      "skills": ["Git", "GitHub", "VS Code", "npm", "pnpm", "ESLint", "Prettier", "Vercel", "Cloudinary", "Supabase", "Claude Code"]
     }
   ],
   "services": [

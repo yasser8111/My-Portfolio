@@ -1,15 +1,16 @@
 "use client";
 
-import React from "react";
 import { useRouter } from "next/navigation";
 import MaterialIcon from "@/components/ui/MaterialIcon";
-import { NavBack } from "@/components/layout/Navbar";
+import SectionHeading from "@/components/ui/SectionHeading";
+import NavBack from "@/components/layout/NavBack";
 import Footer from "@/components/layout/Footer";
 import ContactSection from "@/components/sections/ContactSection";
 import PageBanner from "@/components/ui/PageBanner";
 import { TextBlock } from "@/components/ui/TextBlockEffect";
 import CardReveal from "@/components/ui/CardReveal";
 import { useLanguage } from "@/context/LanguageContext";
+import { splitBoldMarkdown } from "@/lib/utils";
 
 const AboutPage = () => {
   const router = useRouter();
@@ -44,12 +45,7 @@ const AboutPage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-12">
               {/* Left Column: Story */}
               <div className="lg:col-span-7 py-10 px-4 md:px-12">
-                <div className="flex items-center gap-3 mb-10 text-slate-400">
-                  <MaterialIcon icon="person" size={20} />
-                  <span className="text-xs font-bold uppercase tracking-[0.3em]">
-                    {sections.about}
-                  </span>
-                </div>
+                <SectionHeading icon="person" label={sections.about} />
                 <div className="space-y-8">
                   {about.greeting && (
                     <h4 className="text-xl md:text-2xl font-bold text-slate-900">
@@ -62,13 +58,13 @@ const AboutPage = () => {
                   {about.text?.split("\n\n").map((paragraph, i) => (
                     <p key={`intro-${i}`} className="text-lg md:text-xl text-slate-600 leading-relaxed font-medium text-balance">
                       <TextBlock blockColor="#475569" className="block">
-                        {paragraph.split(/(\*\*[^*]+\*\*)/g).map((part, j) =>
-                          part.startsWith("**") && part.endsWith("**") ? (
+                        {splitBoldMarkdown(paragraph).map((part, j) =>
+                          part.isBold ? (
                             <strong key={j} className="font-bold text-slate-800">
-                              {part.slice(2, -2)}
+                              {part.text}
                             </strong>
                           ) : (
-                            part
+                            part.text
                           )
                         )}
                       </TextBlock>
@@ -78,22 +74,17 @@ const AboutPage = () => {
                   {about.longText && (
                     <>
                       <div className="pt-4">
-                        <div className="flex items-center gap-3 mb-8 text-slate-400">
-                          <MaterialIcon icon="auto_stories" size={20} />
-                          <span className="text-xs font-bold uppercase tracking-[0.3em]">
-                            {sections.myStory}
-                          </span>
-                        </div>
+                        <SectionHeading icon="auto_stories" label={sections.myStory} className="mb-8" />
                         {about.longText.split("\n\n").map((paragraph, i) => (
                           <p key={`story-${i}`} className="text-lg md:text-xl text-slate-500 leading-relaxed font-medium text-balance mb-6 last:mb-0">
                             <TextBlock blockColor="#94a3b8" className="block">
-                              {paragraph.split(/(\*\*[^*]+\*\*)/g).map((part, j) =>
-                                part.startsWith("**") && part.endsWith("**") ? (
+                              {splitBoldMarkdown(paragraph).map((part, j) =>
+                                part.isBold ? (
                                   <strong key={j} className="font-bold text-slate-700">
-                                    {part.slice(2, -2)}
+                                    {part.text}
                                   </strong>
                                 ) : (
-                                  part
+                                  part.text
                                 )
                               )}
                             </TextBlock>
@@ -106,12 +97,7 @@ const AboutPage = () => {
 
                 {/* Textual Certificates Section */}
                 <div className="mt-24">
-                  <div className="flex items-center gap-3 mb-12 text-slate-400">
-                    <MaterialIcon icon="workspace_premium" size={20} />
-                    <span className="text-xs font-bold uppercase tracking-[0.3em]">
-                      {sections.certifications}
-                    </span>
-                  </div>
+                  <SectionHeading icon="workspace_premium" label={sections.certifications} className="mb-12" />
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {certificates.map((cert, i) => (
                       <CardReveal key={i} delay={i * 0.1}>
@@ -151,12 +137,7 @@ const AboutPage = () => {
 
               {/* Right Column: Skills */}
               <div className="lg:col-span-5 py-16 px-6 md:px-12 bg-white">
-                <div className="flex items-center gap-3 mb-10 text-slate-400">
-                  <MaterialIcon icon="code" size={20} />
-                  <span className="text-xs font-bold uppercase tracking-[0.3em]">
-                    {sections.technicalStack}
-                  </span>
-                </div>
+                <SectionHeading icon="code" label={sections.technicalStack} />
                 <div className="space-y-12">
                   {expertise.map((item, i) => (
                     <div key={i}>

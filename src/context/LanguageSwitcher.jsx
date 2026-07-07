@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { useLanguage, SUPPORTED_LANGUAGES } from "@/context/LanguageContext";
 
 export default function LanguageSwitcher({ className = "" }) {

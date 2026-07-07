@@ -1,0 +1,1 @@
+- [Project card refactor + React import cleanup](project-card-refactor.md) — shared ProjectCard component, removed 19 redundant `import React` lines

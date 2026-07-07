@@ -1,60 +1,16 @@
 "use client";
 
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { createSlug } from "@/lib/utils";
 import MaterialIcon from "@/components/ui/MaterialIcon";
-import { NavBack } from "@/components/layout/Navbar";
+import NavBack from "@/components/layout/NavBack";
 import Footer from "@/components/layout/Footer";
 import ContactSection from "@/components/sections/ContactSection";
 import PageBanner from "@/components/ui/PageBanner";
 import { TextBlock } from "@/components/ui/TextBlockEffect";
 import { useLanguage } from "@/context/LanguageContext";
-
-/* ─── colour palettes (same 3-colour cycle as HomePage) ─────────────────── */
-const PALETTES = [
-  {
-    base: "#0284c7",
-    bg: "#f0f9ff",
-    bgLight: "#e0f2fe",
-    title: "#0c4a6e",
-    desc: "#0369a1",
-    border: "#bae6fd",
-    tag: "#dbeafe",
-    tagText: "#1e40af",
-  },
-  {
-    base: "#db2777",
-    bg: "#fdf2f8",
-    bgLight: "#fce7f3",
-    title: "#831843",
-    desc: "#be185d",
-    border: "#fbcfe8",
-    tag: "#fce7f3",
-    tagText: "#9d174d",
-  },
-  {
-    base: "#059669",
-    bg: "#ecfdf5",
-    bgLight: "#d1fae5",
-    title: "#064e3b",
-    desc: "#047857",
-    border: "#a7f3d0",
-    tag: "#d1fae5",
-    tagText: "#065f46",
-  },
-];
-
-const ICONS = [
-  "code",
-  "design_services",
-  "extension",
-  "public",
-  "shield",
-  "database",
-  "smartphone",
-  "settings",
-];
+import { SERVICE_PALETTES, SERVICE_ICONS } from "@/lib/constants";
 
 const ServicesPage = () => {
   const router = useRouter();
@@ -108,8 +64,8 @@ const ServicesPage = () => {
 
           {/* ── One section per service ───────────────────────────────────── */}
           {services.map((service, i) => {
-            const p = PALETTES[i % 3];
-            const iconName = ICONS[i % ICONS.length];
+            const p = SERVICE_PALETTES[i % 3];
+            const iconName = SERVICE_ICONS[i % SERVICE_ICONS.length];
             const features = service.features || [];
             const isEven = i % 2 === 0;
 

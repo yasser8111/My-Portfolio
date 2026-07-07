@@ -1,4 +1,3 @@
-import React from "react";
 import MaterialIcon from "@/components/ui/MaterialIcon";
 import Button from "@/components/ui/Button";
 

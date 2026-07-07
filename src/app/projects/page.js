@@ -1,10 +1,9 @@
 "use client";
 
-import React from "react";
 import { useRouter } from "next/navigation";
 import MaterialIcon from "@/components/ui/MaterialIcon";
 import Button from "@/components/ui/Button";
-import { NavBack } from "@/components/layout/Navbar";
+import NavBack from "@/components/layout/NavBack";
 import ProjectsGallery from "@/components/projects/ProjectsGallery";
 import { createSlug } from "@/lib/utils";
 import { useLanguage } from "@/context/LanguageContext";

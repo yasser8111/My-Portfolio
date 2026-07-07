@@ -5,6 +5,8 @@
     "projects": "Projects",
     "services": "Services",
     "contact": "Contact",
+    "menu": "Menu",
+    "close": "Close",
     "allProjects": "All Projects"
   },
   "buttons": {
@@ -90,7 +92,9 @@
       "tech": "React / Vite / Tailwind CSS / React Router / Swiper",
       "desc": "A modern bilingual university platform designed for Airtiqa University Center, featuring seamless Arabic and English support, dynamic news management, interactive content sections, and a responsive experience focused on student engagement and accessibility.",
       "year": "2026",
+      "cover": "/projects/airtqa-1.png",
       "image": "/projects/airtqa-1.png",
+      "images": ["/projects/airtqa-1.png", "/projects/airtqa-2.png"],
       "demoUrl": "https://airtiqa.vercel.app",
       "repoUrl": "https://github.com/yasser8111/Airtqa"
     },
@@ -99,26 +103,11 @@
       "tech": "HTML / CSS / JavaScript / Color Algorithms",
       "desc": "An AI-powered color system generator that creates professional UI palettes from a single base color. Designed for modern SaaS products, it provides harmony modes, dark-mode optimization, and instant export options for designers and developers.",
       "year": "2026",
+      "cover": "/projects/colorlab-1.png",
       "image": "/projects/colorlab-1.png",
+      "images": ["/projects/colorlab-1.png", "/projects/colorlab-2.png"],
       "demoUrl": "https://colorlab811.vercel.app",
       "repoUrl": "https://github.com/yasser8111/ColorLab"
-    },
-    {
-      "title": "GridX",
-      "tech": "JavaScript / HTML / CSS / CodeMirror",
-      "desc": "An interactive coding game that teaches programming logic through real-time JavaScript execution. Players solve challenges by controlling a character on a grid while learning loops, conditions, and problem-solving in an engaging environment.",
-      "year": "2026",
-      "image": "/projects/gridx-1.png",
-      "demoUrl": "https://gridx811.vercel.app",
-      "repoUrl": "https://github.com/yasser8111/GridX"
-    },
-    {
-      "title": "ControlTap",
-      "tech": "JavaScript / Chrome Extension",
-      "desc": "A browser extension that enhances user control and productivity by simplifying tab management and providing quick-access actions.",
-      "year": "2026",
-      "image": "https://bfpjacqkzxjirhoqpsmy.supabase.co/storage/v1/object/public/imges/controlTap.png",
-      "repoUrl": "https://github.com/yasser8111/ControlTap-Beta"
     }
   ],
   "expertise": [
@@ -136,7 +125,7 @@
     },
     {
       "category": "Tools",
-      "skills": ["Git", "GitHub", "VS Code", "npm", "pnpm", "ESLint", "Prettier", "Vercel", "Cloudinary"]
+      "skills": ["Git", "GitHub", "VS Code", "npm", "pnpm", "ESLint", "Prettier", "Vercel", "Cloudinary", "Supabase", "Claude Code"]
     }
   ],
   "services": [

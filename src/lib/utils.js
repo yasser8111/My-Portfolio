@@ -1,7 +1,7 @@
-// Simple utility to merge class names
+// ─── Class name merger ────────────────────────────────────
 export const cn = (...classes) => classes.filter(Boolean).join(" ");
 
-// Helper function to create URL-friendly slugs
+// ─── URL-friendly slug ────────────────────────────────────
 export const createSlug = (title) => {
   if (!title) return "";
   return title
@@ -9,3 +9,10 @@ export const createSlug = (title) => {
     .replace(/[^a-z0-9\s-]/g, "")
     .replace(/\s+/g, "-");
 };
+
+// ─── Bold markdown parser (e.g. "Hello **world**" → [{ text: "Hello", isBold: false }, { text: "world", isBold: true }]) ───
+export const splitBoldMarkdown = (text) =>
+  text.split(/(\*\*[^*]+\*\*)/g).map((part) => ({
+    isBold: part.startsWith("**") && part.endsWith("**"),
+    text: part.replace(/^\*\*|\*\*$/g, ""),
+  }));

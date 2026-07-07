@@ -1,4 +1,3 @@
-import React from "react";
 import { TextBlock } from "./TextBlockEffect";
 
 const Title = ({ 

@@ -1,10 +1,9 @@
 "use client";
 
-import React from "react";
 import { useParams, useRouter } from "next/navigation";
 import { useLanguage } from "@/context/LanguageContext";
 import { createSlug } from "@/lib/utils";
-import { NavBack } from "@/components/layout/Navbar";
+import NavBack from "@/components/layout/NavBack";
 import ProjectButtons from "@/components/projects/ProjectButtons";
 
 export default function ProjectDetailsPage() {

@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { TextBlock } from "@/components/ui/TextBlockEffect";
 import Button from "@/components/ui/Button";
 import { GithubIcon, WhatsappIcon, InstagramIcon, XIcon, LinkedInIcon } from "@/components/ui/BrandIcons";
