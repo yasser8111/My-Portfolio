@@ -1,0 +1,197 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "services": "Services",
+    "contact": "Contact",
+    "allProjects": "All Projects"
+  },
+  "buttons": {
+    "viewProjects": "View Real Projects",
+    "contactMe": "Let's Start Your Project",
+    "liveDemo": "Live Demo",
+    "sourceCode": "Source Code",
+    "viewAll": "Explore Projects",
+    "aboutMe": "More",
+    "moreServices": "More",
+    "backToHome": "Back"
+  },
+  "sections": {
+    "selectedWorks": "Selected Works",
+    "selectedWorksSubtitle": "A glimpse into my recent work.",
+    "about": "About",
+    "expertise": "Skills",
+    "letsBuild": "Let's build\nsomething useful",
+    "services": "Services",
+    "servicesSubtitle": "I provide end-to-end digital solutions focused on high performance, modern UI, and seamless user experience.",
+    "whatYouGet": "What You Get",
+    "philosophy": "Philosophy",
+    "myStory": "My Story",
+    "technicalStack": "Technical Stack",
+    "certifications": "Certifications & Achievements"
+  },
+  "personal": {
+    "nickname": "YSR",
+    "name": "YASER",
+    "email": "yasser.dev.811@gmail.com",
+    "underConstructionText": "Site under development",
+    "socials": {
+      "github": "https://github.com/yasser8111",
+      "whatsapp": "https://wa.me/967739770762",
+      "instagram": "https://www.instagram.com/ysrnhdi811/",
+      "x": "https://x.com/ysrnhdi811",
+      "linkedin": "https://linkedin.com/in/yasser8111"
+    }
+  },
+  "hero": {
+    "title": "Fast, clear websites,\nbuilt to grow with your business.",
+    "subtitle": "I help businesses and SMEs build fast, user-friendly, and scalable websites.",
+    "stats": {
+      "completedProjects": "3+ Completed Projects",
+      "focusPerformance": "Focus on Performance & UX",
+      "bestPractice": "Best Practice Designs"
+    }
+  },
+  "about": {
+    "greeting": "Hi, I'm Yasser.",
+    "text": "I've been fascinated by building things for as long as I can remember. When I was younger, I started exploring programming through **Godot**, where I created small games and discovered how rewarding it feels to turn an idea into something real.\n\nAs my curiosity grew, I wanted to build my own website, so I began learning HTML, CSS, and JavaScript. My very first website was, honestly, far from good—but to me, it represented something much bigger: the beginning of a journey.\n\nSince then, I've continued improving my skills, focusing on creating fast, clean, and thoughtful web experiences. Every project teaches me something new, and I still enjoy the same feeling that inspired me from the start—building useful things that people can actually use.",
+    "points": []
+  },
+  "philosophy": "Simplicity in Code, Clarity in design.\nI believe that complexity is the enemy of progress. In code, simplicity means maintainability and performance. In design, clarity means an intuitive experience where the user never has to guess. My approach is to strip away the noise until only what is essential remains.",
+  "certificates": [
+    {
+      "title": "Front-End Development (HTML, CSS, JavaScript)",
+      "issuer": "Abaad Institute",
+      "year": "36h – Grade: Excellent"
+    },
+    {
+      "title": "UI/UX Design Fundamentals using Figma",
+      "issuer": "Hadhramout University",
+      "year": "30h: Figma, UI Foundations"
+    },
+    {
+      "title": "Intermediate Diploma in English Language",
+      "issuer": "Hadhramout Research Center",
+      "year": "300h: Grade 82% (Very Good)"
+    },
+    {
+      "title": "From Zero to Your First AI Agent",
+      "issuer": "Hadhramout Foundation - Human Development",
+      "year": "8h workshop: AI Agents, Prompting"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Airtiqa",
+      "tech": "React / Vite / Tailwind CSS / React Router / Swiper",
+      "desc": "A modern bilingual university platform designed for Airtiqa University Center, featuring seamless Arabic and English support, dynamic news management, interactive content sections, and a responsive experience focused on student engagement and accessibility.",
+      "year": "2026",
+      "image": "/projects/airtqa-1.png",
+      "demoUrl": "https://airtiqa.vercel.app",
+      "repoUrl": "https://github.com/yasser8111/Airtqa"
+    },
+    {
+      "title": "ColorLab",
+      "tech": "HTML / CSS / JavaScript / Color Algorithms",
+      "desc": "An AI-powered color system generator that creates professional UI palettes from a single base color. Designed for modern SaaS products, it provides harmony modes, dark-mode optimization, and instant export options for designers and developers.",
+      "year": "2026",
+      "image": "/projects/colorlab-1.png",
+      "demoUrl": "https://colorlab811.vercel.app",
+      "repoUrl": "https://github.com/yasser8111/ColorLab"
+    },
+    {
+      "title": "GridX",
+      "tech": "JavaScript / HTML / CSS / CodeMirror",
+      "desc": "An interactive coding game that teaches programming logic through real-time JavaScript execution. Players solve challenges by controlling a character on a grid while learning loops, conditions, and problem-solving in an engaging environment.",
+      "year": "2026",
+      "image": "/projects/gridx-1.png",
+      "demoUrl": "https://gridx811.vercel.app",
+      "repoUrl": "https://github.com/yasser8111/GridX"
+    },
+    {
+      "title": "ControlTap",
+      "tech": "JavaScript / Chrome Extension",
+      "desc": "A browser extension that enhances user control and productivity by simplifying tab management and providing quick-access actions.",
+      "year": "2026",
+      "image": "https://bfpjacqkzxjirhoqpsmy.supabase.co/storage/v1/object/public/imges/controlTap.png",
+      "repoUrl": "https://github.com/yasser8111/ControlTap-Beta"
+    }
+  ],
+  "expertise": [
+    {
+      "category": "Frontend",
+      "skills": ["React", "Next.js", "TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3", "Tailwind CSS", "Vite", "Responsive Design", "Accessibility"]
+    },
+    {
+      "category": "UI/UX",
+      "skills": ["Figma", "Design Systems", "Component Libraries", "Wireframing", "Prototyping", "User Experience", "User Interface", "Visual Design"]
+    },
+    {
+      "category": "AI",
+      "skills": ["Prompt Engineering", "LLM Integration", "AI Agents", "RAG Systems", "API Integration"]
+    },
+    {
+      "category": "Tools",
+      "skills": ["Git", "GitHub", "VS Code", "npm", "pnpm", "ESLint", "Prettier", "Vercel", "Cloudinary"]
+    }
+  ],
+  "services": [
+    {
+      "title": "Frontend Development",
+      "desc": "Building fast, responsive, and accessible web interfaces with React and Tailwind CSS.",
+      "features": [
+        "Interactive UIs",
+        "Performance Tuning",
+        "Responsive Design",
+        "Accessibility (a11y)",
+        "SEO Optimization",
+        "Clean Architecture"
+      ]
+    },
+    {
+      "title": "UI/UX to Code",
+      "desc": "Converting Figma designs into pixel-perfect, high-performance web components.",
+      "features": [
+        "Pixel Perfect",
+        "Reusable Components",
+        "Smooth Animations",
+        "Design System Integration",
+        "Cross-Browser Support"
+      ]
+    },
+    {
+      "title": "Chrome Extensions",
+      "desc": "Developing custom browser tools to automate tasks and improve user productivity.",
+      "features": [
+        "Task Automation",
+        "System Integration",
+        "Ongoing Maintenance",
+        "Content Scripts",
+        "Background Processes",
+        "API Integration"
+      ]
+    }
+  ],
+  "footer": {
+    "text": ",Designed and developed by YASER :D."
+  },
+  "gallery": {
+    "hint": "Drag to explore projects board",
+    "viewProject": "View Project"
+  },
+  "galleryMobile": {
+    "title": "Sorry, Page Not Available",
+    "description": "Sorry, the interactive projects gallery is specially designed for large screens. Please visit from a desktop device to enjoy the full experience."
+  },
+  "projectNotFound": {
+    "title": "Project Not Found",
+    "backToProjects": "Back to Projects"
+  },
+  "notFound": {
+    "title": "404",
+    "subtitle": "Page Not Found",
+    "message": "The page you are looking for doesn't exist or has been moved.",
+    "button": "Go Back Home"
+  }
+}
