@@ -39,7 +39,7 @@ const Navbar = ({
               src="/logo.svg"
               alt="Logo"
               className={`w-8 h-8 md:w-9 md:h-9 object-contain pointer-events-none select-none transition-all duration-300 ${
-                !scrolled ? "brightness-0 invert" : ""
+                !scrolled ? "brightness-0 invert md:brightness-100 md:invert-0" : ""
               }`}
               draggable="false"
             />
@@ -54,7 +54,7 @@ const Navbar = ({
                   }}
                   className={`text-xs font-bold uppercase tracking-widest transition-colors ${
                     !scrolled
-                      ? "text-white/80 hover:text-white"
+                      ? "text-white/80 hover:text-white md:text-slate-600 md:hover:text-blue-600"
                       : "text-slate-600 hover:text-blue-600"
                   }`}
                 >
@@ -69,7 +69,7 @@ const Navbar = ({
                   }}
                   className={`text-xs font-bold uppercase tracking-widest transition-colors ${
                     !scrolled
-                      ? "text-white/80 hover:text-white"
+                      ? "text-white/80 hover:text-white md:text-slate-600 md:hover:text-blue-600"
                       : "text-slate-600 hover:text-blue-600"
                   }`}
                 >
@@ -93,7 +93,7 @@ const Navbar = ({
             </button>
           ) : (
             <div className="flex items-center gap-2 md:gap-3">
-              <LanguageSwitcher light={!scrolled} />
+              <LanguageSwitcher className={!scrolled ? "!text-white/80 hover:!text-white md:!text-slate-600 md:hover:!text-blue-600" : ""} />
 
               <a
                 href="#contact"
